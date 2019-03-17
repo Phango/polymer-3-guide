@@ -1,6 +1,7 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '@polymer/iron-icons/iron-icons.js';
 import '../icon-toggle.js';
+import '../my-custom-element.js';
 
 class DemoElement extends PolymerElement {
   static get template() {
@@ -14,12 +15,16 @@ class DemoElement extends PolymerElement {
       <h3>Statically-configured icon-toggles</h3>
       <icon-toggle toggle-icon="star"></icon-toggle>
       <icon-toggle toggle-icon="star" pressed></icon-toggle>
-        
+      <icon-toggle toggle-icon="menu"></icon-toggle>
+      <icon-toggle toggle-icon="add"></icon-toggle>
+      <icon-toggle toggle-icon="menu"></icon-toggle>
+
       <h3>Data-bound icon-toggle</h3>
       <!-- use a computed binding to generate the message -->
       <div><span>[[_message(isFav)]]</span></div>
       <!-- curly brackets ({{}}} allow two-way binding --> 
       <icon-toggle toggle-icon="favorite" pressed="{{isFav}}"></icon-toggle>
+    
     `;
   }
   _message(fav) {
